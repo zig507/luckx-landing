@@ -4,138 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUCKX Engine Preview</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #0f172a;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #f8fafc;
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 2.5rem;
-      max-width: 540px;
-      width: 90%;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-    }
-    .badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: #1e1b4b;
-      color: #818cf8;
-      border: 1px solid #3730a3;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    p.subtitle {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-    .terms-box {
-      background: #0f172a;
-      border: 1px solid #334155;
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-    .terms-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-    }
-    ul {
-      margin: 0;
-      padding-left: 1.2rem;
-      color: #cbd5e1;
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    li:last-child {
-      margin-bottom: 0;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      box-sizing: border-box;
-      padding: 0.875rem 1.5rem;
-      background: #4f46e5;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-    .btn:hover {
-      background: #4338ca;
-    }
-    footer {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.875rem;
-      color: #94a3b8;
-    }
-    footer a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#0b1120] text-zinc-300 min-h-screen flex flex-col justify-between items-center p-6 antialiased selection:bg-indigo-500 selection:text-white">
 
-  <div class="card">
-    <div class="badge">Limited Public Evaluation</div>
-    <h1>LUCKX Engine Preview</h1>
-    <p class="subtitle">Welcome to the 45-day public research and evaluation phase of the multi-agent research architecture.</p>
+  <!-- Main Card Container -->
+  <div class="w-full flex-grow flex items-center justify-center">
+    <div class="max-w-xl w-full bg-[#111827]/80 border border-zinc-800/80 rounded-2xl p-8 shadow-2xl backdrop-blur-md">
+      
+      <!-- Badge -->
+      <div class="inline-block px-3 py-1 bg-indigo-950/80 border border-indigo-500/30 rounded-full text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-5">
+        LIMITED PUBLIC EVALUATION
+      </div>
 
-    <div class="terms-box">
-      <div class="terms-title">Terms of Access & Fair Use</div>
-      <ul>
-        <li><strong>45-Day Evaluation Period:</strong> This system is in active public testing and is provided free of charge for non-commercial research purposes.</li>
-        <li><strong>Fair Use & Quotas:</strong> Automated daily request quotas (IP/Q) and rate limits are enforced to guarantee shared availability across all evaluators.</li>
-        <li><strong>Data & Privacy:</strong> Input queries are processed via secure silent API pipelines. Please do not submit confidential, personally sensitive, or secret credentials.</li>
-      </ul>
+      <!-- Title & Intro -->
+      <h1 class="text-3xl font-bold text-white mb-3 tracking-tight">LUCKX Engine Preview</h1>
+      <p class="text-sm text-zinc-400 mb-6 leading-relaxed">
+        Welcome to the 45-day public research and evaluation phase of the multi-agent research architecture.
+      </p>
+
+      <!-- Terms of Access & Disclaimer Box -->
+      <div class="bg-[#080d1a]/80 border border-zinc-800/80 rounded-xl p-5 mb-6 text-xs space-y-3">
+        <div class="text-zinc-400 font-semibold tracking-wider uppercase text-[11px]">
+          TERMS OF ACCESS & FAIR USE
+        </div>
+        
+        <ul class="space-y-2.5 text-zinc-400 list-disc list-inside">
+          <li>
+            <strong class="text-zinc-200">45-Day Evaluation Period:</strong> This system is in active public testing and is provided free of charge for non-commercial research purposes.
+          </li>
+          <li>
+            <strong class="text-zinc-200">Fair Use & Quotas:</strong> Automated daily request quotas (IP/Q) and rate limits are enforced to guarantee shared availability across all evaluators.
+          </li>
+          <li>
+            <strong class="text-zinc-200">Data & Privacy:</strong> Input queries are processed via secure silent API pipelines. Please do not submit confidential, personally sensitive, or secret credentials.
+          </li>
+          <li>
+            <strong class="text-zinc-200">No Professional Advice & Zero Liability:</strong> Outputs are autonomously synthesized research models provided strictly "AS IS". LUCKX RESEARCH LLC provides no formal legal, investment, tax, or accounting advice and expressly disclaims all liability for reliance on generated data.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Action Button leading to product -->
+      <a 
+        href="https://product.luckx.biz" 
+        class="block w-full py-3.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl text-center transition-all shadow-lg shadow-indigo-600/20 text-sm"
+      >
+        I Agree — Start Free Test
+      </a>
+
     </div>
-
-    <a href="https://product.luckx.biz" class="btn">I Agree — Start Free Test</a>
   </div>
 
-  <footer>
-    <p>Thank you for your feedback: <a href="mailto:contact@luckx.biz">contact@luckx.biz</a></p>
+  <!-- Footer -->
+  <footer class="text-center text-xs text-zinc-500 py-4 space-y-1">
+    <div>
+      Thank you for your feedback: 
+      <a href="mailto:contact@luckx.biz" class="text-indigo-400 hover:underline">contact@luckx.biz</a>
+    </div>
+    <div class="text-zinc-600 text-[11px]">
+      © 2026 LUCKX RESEARCH LLC &nbsp;|&nbsp; 1023 E. LINCOLN WAY, CHEYENNE, WY 82001
+    </div>
   </footer>
-
-</body>
-</html>
 
 </body>
 </html>
